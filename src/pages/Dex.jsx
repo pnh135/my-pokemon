@@ -1,9 +1,12 @@
 import React from "react";
+import Dashboard from "../components/Dashboard";
+import PokemonCard from "../components/PokemonCard";
 
 const Dex = () => {
     return ( 
         <>
-        <p>DEX 페이지</p>
+        <Dashboard/>
+        <PokemonCard/>
         </>
      );
 }
