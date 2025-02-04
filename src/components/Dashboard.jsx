@@ -14,7 +14,7 @@ const StdContainer = styled.div`
 const StdBox= styled.div`
     width: 100px;
     height: 100px;
-    border: 1px solid green;
+    border: 5px dotted green;
     background-color: white;
     margin: 20px;
 `
