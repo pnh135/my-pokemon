@@ -5,11 +5,11 @@ const PokemonCard = () => {
         <>
         카드 뿌리기
         <PokemonList/>
-        {/* {data.map((data) =>{
-            <div>
-                <div>{data.img}</div>
-                <div>{data.name}</div>
-                <div>{data.img}</div>
+        {/* {data.map((card) =>{
+            <div key={card.id}>
+                <div>{card.img_url}</div>
+                <div>{card.korean_name}</div>
+                <div>{card.id}</div>
             </div>
         })} */}
         </>

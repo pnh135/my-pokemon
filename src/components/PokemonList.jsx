@@ -1,8 +1,8 @@
-import {React, useState} from "react";
+import React from "react";
 import MOCK_DATA from "../data/MOCK_DATA";
 
 const PokemonList = () => {
-    const [data, setData] = useState(MOCK_DATA)
+    const data = MOCK_DATA;
     
     return ( 
         <>
