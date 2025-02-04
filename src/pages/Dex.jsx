@@ -5,8 +5,12 @@ import PokemonCard from "../components/PokemonCard";
 const Dex = () => {
     return ( 
         <>
-        <Dashboard/>
-        <PokemonCard/>
+        <section>
+            <Dashboard/>
+        </section>
+        <section>
+            <PokemonCard/>
+        </section>
         </>
      );
 }
