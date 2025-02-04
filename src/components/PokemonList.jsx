@@ -3,12 +3,13 @@ import PokemonCard from "./PokemonCard";
 import MOCK_DATA from "../data/MOCK_DATA";
 
 const PokemonList = () => {
-    
+    const dataProps = MOCK_DATA
+
     return ( 
         <>
         <div>
-           { MOCK_DATA.map((data)=> {
-            <PokemonCard key={data.id} MOCK_DATA={MOCK_DATA}/>
+           { dataProps.map((data)=> {
+            <PokemonCard key={data.id} dataProps={dataProps}/>
            })
            } 
         </div>

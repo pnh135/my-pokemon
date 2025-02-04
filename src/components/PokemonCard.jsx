@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import MOCK_DATA from "../data/MOCK_DATA";
 
-const PokemonCard = (data) => {
-    const StdBtn = styled.button`
+const StdBtn = styled.button`
         background-color: red;
         color: white;
     `
+const PokemonCard = ({dataProps}) => {
+
     return ( 
         <>
         <div>
             <div>카드 형태</div>
-                <div>{MOCK_DATA.img_url}</div>
-                <div>{MOCK_DATA.korean_name}</div>
-                <div>{MOCK_DATA.id}</div>
+                <div>{dataProps.img_url}</div>
+                <div>{dataProps.korean_name}</div>
+                <div>{dataProps.id}</div>
                 <StdBtn>추가</StdBtn>
         </div>    
         </>
