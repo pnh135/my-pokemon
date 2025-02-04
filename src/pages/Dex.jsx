@@ -1,7 +1,7 @@
-import { react, useState } from "react";
+import react from "react";
 
 import Dashboard from "../components/Dashboard";
-import PokemonCard from "../components/PokemonCard";
+import PokemonList from "../components/PokemonList";
 
 const Dex = () => {
 
@@ -11,7 +11,7 @@ const Dex = () => {
             <Dashboard/>
         </section>
         <section>
-            <PokemonCard/>
+            <PokemonList/>
         </section>
         </>
      );

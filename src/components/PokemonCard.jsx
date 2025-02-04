@@ -1,22 +1,20 @@
-import PokemonList from "./PokemonList";
 import styled from "styled-components";
+import MOCK_DATA from "../data/MOCK_DATA";
 
-const PokemonCard = () => {
+const PokemonCard = (data) => {
     const StdBtn = styled.button`
         background-color: red;
         color: white;
     `
     return ( 
         <>
-        카드 형태
-        <PokemonList/>
         <div>
-                <div>{card.img_url}</div>
-                <div>{card.korean_name}</div>
-                <div>{card.id}</div>
+            <div>카드 형태</div>
+                <div>{MOCK_DATA.img_url}</div>
+                <div>{MOCK_DATA.korean_name}</div>
+                <div>{MOCK_DATA.id}</div>
                 <StdBtn>추가</StdBtn>
-        </div>
-            
+        </div>    
         </>
      );
 }
