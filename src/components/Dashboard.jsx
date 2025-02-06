@@ -23,12 +23,13 @@ const Dashboard = () => {
         <>
         <StdP>나만의 포켓몬</StdP>
         <StdContainer>
-            <StdBox>첫번째 박스</StdBox>
-            <StdBox>두번째 박스</StdBox>
-            <StdBox>세번째 박스</StdBox>
-            <StdBox>네번째 박스</StdBox>
-            <StdBox>다섯번째 박스</StdBox>
-            <StdBox>여섯번째 박스</StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/>
+            </StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/></StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/></StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/></StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/></StdBox>
+            <StdBox><img src="https://i.imgur.com/sJ5KcxJ.png" width="100"alt="..."/></StdBox>
         </StdContainer>
         </>
      );
