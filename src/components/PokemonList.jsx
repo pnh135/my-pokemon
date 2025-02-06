@@ -7,9 +7,9 @@ const PokemonList = () => {
     return ( 
         <>
         <div>
-           { MOCK_DATA.map((data)=> {
-            <PokemonCard key={data.id} data={data} dataProps={MOCK_DATA}/>
-           })
+           { MOCK_DATA.map((data)=> 
+            <PokemonCard key={data.id} data={data}/>
+           )
            } 
         </div>
         </>

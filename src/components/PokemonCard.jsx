@@ -4,15 +4,14 @@ const StdBtn = styled.button`
         background-color: red;
         color: white;
     `
-const PokemonCard = ({dataProps}) => {
+const PokemonCard = ({data}) => {
 
     return ( 
         <>
         <div>
-            <div>카드 형태</div>
-                <div>{dataProps.img_url}</div>
-                <div>{dataProps.korean_name}</div>
-                <div>{dataProps.id}</div>
+                <div>{data.img_url}</div>
+                <div>{data.korean_name}</div>
+                <div>{data.id}</div>
                 <StdBtn>추가</StdBtn>
         </div>    
         </>
