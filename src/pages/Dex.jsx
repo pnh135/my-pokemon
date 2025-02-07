@@ -8,14 +8,13 @@ const Dex = () => {
   const [ball, setBall] = useState([]);
   // 포켓몬을 선택하는 함수
   const AddPokemon = (item) => {
-    // if (ball.some(item)===true) {
-    //    alert("이미 추가된 포켓몬입니다.")
-    // }else if (ball.length >= 6) {
-    //    alert("포켓몬은 최대 6개입니다.")
-    // } else {
-    //   setBall([...ball,item]);
-    // }
-    setBall([...ball, item]);
+    if (ball.length < 6) {
+      ball.push(item);
+    } else {
+      alert("포켓몬은 6마리가 최대입니다.");
+    }
+    setBall([...ball]);
+
     // return console.log(ball);
 
     // item을 그대로 추가
@@ -28,7 +27,7 @@ const Dex = () => {
   return (
     <>
       <section>
-        <Dashboard AddPokemon={AddPokemon} />
+        <Dashboard ball={ball} AddPokemon={AddPokemon} />
       </section>
       <section>
         <PokemonList AddPokemon={AddPokemon} />

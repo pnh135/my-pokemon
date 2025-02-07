@@ -27,23 +27,48 @@ const Dashboard = ({ ball }) => {
       <StdP>나만의 포켓몬</StdP>
       {/* 클릭한 포켓몬을 가져오는 컨테이너 */}
       <StdContainer>
+        {console.log(ball)}
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[0] !== undefined ? (
+            <div>{ball[0].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[1] !== undefined ? (
+            <div>{ball[1].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[2] !== undefined ? (
+            <div>{ball[2].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[3] !== undefined ? (
+            <div>{ball[3].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[4] !== undefined ? (
+            <div>{ball[4].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
         <StdBox>
-          {{ ball }.length > 0 ? <div>뭔가옴</div> : <PokemonBall />}
+          {{ ball }[5] !== undefined ? (
+            <div>{ball[5].id}</div>
+          ) : (
+            <PokemonBall />
+          )}
         </StdBox>
       </StdContainer>
     </>
