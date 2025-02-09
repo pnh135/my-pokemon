@@ -2,3 +2,13 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.card-name {
+  padding: 3px;
+  font-size: 0.8em;
+}
+
+.card-num {
+  padding: 3px;
+  font-size: 0.6em;
+}

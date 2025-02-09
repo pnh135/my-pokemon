@@ -6,6 +6,8 @@ import Card from "../styles/Card";
 // 리셋한 p 태그의 스타일 정하기
 const StdP = styled.p`
   color: red;
+  font-size: 2.5em;
+  margin-bottom: 2%;
 `;
 
 // 컨테이너의 스타일 정하기
@@ -34,8 +36,8 @@ const Dashboard = ({ ball, setBall, GetEmptyBalls }) => {
             <div>
               <img src={item.img_url} />
             </div>
-            <div>{item.korean_name}</div>
-            <div>No.{item.id}</div>
+            <div className="card-name">{item.korean_name}</div>
+            <div className="card-num">No.{item.id}</div>
             <Button onClick={() => removePokemon(item.id)}>제거</Button>
           </Card>
         ))}

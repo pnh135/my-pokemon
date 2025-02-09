@@ -10,8 +10,8 @@ const PokemonCard = ({ data, onClick }) => {
         <div>
           <img src={data.img_url} />
         </div>
-        <div>{data.korean_name}</div>
-        <div>No.{data.id}</div>
+        <div className="card-name">{data.korean_name}</div>
+        <div className="card-num">No.{data.id}</div>
         <Button onClick={onClick}>추가</Button>
       </Card>
     </>
