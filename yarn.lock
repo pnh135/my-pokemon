@@ -426,6 +426,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@kfonts/neodgm@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@kfonts/neodgm/-/neodgm-0.5.0.tgz#39f3cdac8a1377200101b6e8907826747f8461c3"
+  integrity sha512-zimxILNfvUdL/Kpmnr+0FxVObU0bggwa+M61+XbF0EW12T7BSrAVAOjFIQl3USObSeARFQ2yFlkoUzZppwE9jQ==
+
 "@rollup/rollup-android-arm-eabi@4.34.1":
   version "4.34.1"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.34.1.tgz#a09cb0718297a2f0cc7f9b4dfca4d08753ea5c9b"
