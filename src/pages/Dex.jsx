@@ -58,6 +58,7 @@ const Dex = () => {
           ball={ball}
           setBall={setBall}
           GetEmptyBalls={GetEmptyBalls}
+          s
         />
       </section>
       <section>
