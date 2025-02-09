@@ -41,14 +41,6 @@ const Dex = () => {
       alert("포켓몬은 6마리가 최대입니다.");
     }
     setBall([...ball]);
-
-    // return console.log(ball);
-
-    // item을 그대로 추가
-    // length가 6 이상일 때 alert
-    // return으로 함수 빠져나오기
-    // ball에 some으로 중복 확인 > 그대로 추가 > 아닐시 alert
-    //
   };
 
   return (
