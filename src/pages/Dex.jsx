@@ -1,4 +1,4 @@
-import { react, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import styled from "styled-components";
 import Dashboard from "../components/Dashboard";
@@ -20,11 +20,12 @@ const Dex = () => {
     () => JSON.parse(window.localStorage.getItem("ball")) || []
   );
 
-  // 선택한 포켓몬이 없을 때 이미지가 보이도록 하는 함수
+  // 선택한 포켓몬이 없을 때 포켓볼 이미지가 보이도록 하는 함수
   const GetEmptyBalls = () => {
     const EmptyBall = [];
     const MyBalls = ball.length;
 
+    // for문을 돌면서 하나씩 rendering
     for (let i = 0; i < 6 - MyBalls; i++) {
       EmptyBall.push(
         <StdBox key={i} className="empty-card">
@@ -37,6 +38,7 @@ const Dex = () => {
 
   // 포켓몬을 선택하는 함수
   const AddPokemon = (item) => {
+    // 배열의 길이(선택된 포켓몬)이 6개가 되지 않을 때 추가
     if (ball.length < 6) {
       ball.push(item);
     } else {

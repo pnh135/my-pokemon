@@ -7,6 +7,7 @@ const StdBtn = styled.button`
   color: white;
   border-radius: 6px;
   padding: 5px;
+  margin: 10px;
   font-family: "Neo둥근모", "NeoDunggeunmo", cursive;
 
   &:hover {

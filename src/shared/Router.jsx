@@ -5,6 +5,7 @@ import Details from "../pages/Details";
 
 const Router = () => {
   return (
+    // 라우터에 따라 보이는 페이지가 달라지도록 설정
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />

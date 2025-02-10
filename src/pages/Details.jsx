@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../styles/Button";
 
+// 제목 박스 스타일 정하기
 const StdName = styled.div`
   display: flex;
   justify-content: center;
@@ -14,6 +15,7 @@ const StdName = styled.div`
   background-color: #dedede;
 `;
 
+// 하이라이트 머리글 스타일 정하기
 const StdColor = styled.div`
   border-radius: 8px;
   background-color: blue;
@@ -23,7 +25,8 @@ const StdColor = styled.div`
   padding: 2px;
 `;
 
-const StdNameTag = styled.p`
+// 박스 안 텍스트 스타일 정하기
+const StdNameTag = styled.span`
   margin: 20px;
   font-size: 1.3em;
 `;
@@ -47,7 +50,7 @@ const Details = () => {
         </StdNameTag>
         <StdNameTag>
           <StdColor>타입</StdColor>
-          {state.types}
+          <div>{state.types}</div>
         </StdNameTag>
         <StdNameTag>
           <StdColor>설명</StdColor>
