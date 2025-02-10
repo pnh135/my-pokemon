@@ -12,7 +12,7 @@ const StdP = styled.p`
 // 컨테이너의 스타일 정하기
 const StdContainer = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 5%;
   margin: 2% 0 7% 0;
   justify-content: center;
   align-content: space-evenly;

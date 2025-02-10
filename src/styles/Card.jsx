@@ -9,7 +9,7 @@ const StyledCard = styled.div`
   box-shadow: 5px 5px 10px grey;
   background-color: white;
   background-position: center;
-  flex: 0 0 14%;
+  flex: 0 0 12%;
   cursor: pointer;
 `;
 

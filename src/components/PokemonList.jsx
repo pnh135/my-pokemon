@@ -38,7 +38,10 @@ const PokemonList = ({ AddPokemon }) => {
             <PokemonCard
               key={data.id}
               data={data}
-              onClick={() => AddPokemon(data)}
+              onClick={(e) => {
+                e.stopPropagation();
+                AddPokemon(data);
+              }}
             />
           </div>
         ))}

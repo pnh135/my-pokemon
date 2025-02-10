@@ -10,13 +10,17 @@ const StdName = styled.div`
   height: 30%;
   border: 5px solid black;
   margin: 0 auto;
+  padding: 8px;
   background-color: #dedede;
 `;
 
 const StdColor = styled.div`
+  border-radius: 8px;
   background-color: blue;
   color: white;
-  width: 25%;
+  width: 10%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
 `;
 
 const StdNameTag = styled.p`
