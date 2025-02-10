@@ -6,13 +6,14 @@ import Card from "../styles/Card";
 const StdP = styled.p`
   color: red;
   font-size: 2.5em;
-  margin-bottom: 2%;
+  margin: 2% 0 2% 0;
 `;
 
 // 컨테이너의 스타일 정하기
 const StdContainer = styled.div`
   display: flex;
   gap: 20px;
+  margin: 2% 0 7% 0;
   justify-content: center;
   align-content: space-evenly;
 `;

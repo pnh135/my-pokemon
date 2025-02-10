@@ -1,4 +1,4 @@
-import { react, useState } from "react";
+import { react, useState, useEffect } from "react";
 
 import styled from "styled-components";
 import Dashboard from "../components/Dashboard";
@@ -25,7 +25,7 @@ const Dex = () => {
 
     for (let i = 0; i < MyBalls; i++) {
       EmptyBall.push(
-        <StdBox key={i}>
+        <StdBox key={i} className="empty-card">
           <PokemonBall />
         </StdBox>
       );
@@ -42,6 +42,12 @@ const Dex = () => {
     }
     setBall([...ball]);
   };
+
+  // useEffect(() => {
+  //   // 상태가 변경될 때마다 로컬 스토리지에 저장
+  //   let balls = window.localStorage.getItem("balls")
+  //   window.localStorage.setItem("balls", JSON.stringify(balls));
+  // }, [balls]);
 
   return (
     <>

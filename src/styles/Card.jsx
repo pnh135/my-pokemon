@@ -3,7 +3,6 @@ import styled from "styled-components";
 // 포켓몬 카드 스타일 정하기
 const StyledCard = styled.div`
   max-width: 120px;
-  margin-top: 6px;
   border: 3px;
   padding: 5px;
   border-radius: 10px;
@@ -11,6 +10,7 @@ const StyledCard = styled.div`
   background-color: white;
   background-position: center;
   flex: 0 0 14%;
+  cursor: pointer;
 `;
 
 const Card = ({ children }) => {

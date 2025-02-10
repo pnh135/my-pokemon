@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import PokemonCard from "./PokemonCard";
 import MOCK_DATA from "../data/MOCK_DATA";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
+  margin-top: 5%;
   display: flex;
   gap: 20px;
   flex-direction: row;
@@ -14,16 +15,23 @@ const Container = styled.div`
 `;
 
 const PokemonList = ({ AddPokemon }) => {
+  const navigate = useNavigate();
   return (
     <>
       {/* 받은 포켓몬 카드 함수로 map 작성해서 리스트 만들기 */}
       <Container>
         {MOCK_DATA.map((data) => (
-          <PokemonCard
+          //  카드를 누르면 디테일 페이지로 가도록 navigate 처리
+          <div
             key={data.id}
-            data={data}
-            onClick={() => AddPokemon(data)}
-          />
+            onClick={() => navigate(`/Details/?id=${data.id}`)}
+          >
+            <PokemonCard
+              key={data.id}
+              data={data}
+              onClick={() => AddPokemon(data)}
+            />
+          </div>
         ))}
       </Container>
     </>
