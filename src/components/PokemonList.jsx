@@ -24,7 +24,16 @@ const PokemonList = ({ AddPokemon }) => {
           //  카드를 누르면 디테일 페이지로 가도록 navigate 처리
           <div
             key={data.id}
-            onClick={() => navigate(`/Details/?id=${data.id}`)}
+            onClick={() => {
+              navigate(`/Details/?id=${data.id}`, {
+                state: {
+                  img_url: `${data.img_url}`,
+                  korean_name: `${data.korean_name}`,
+                  types: `${data.types}`,
+                  description: `${data.description}`,
+                },
+              });
+            }}
           >
             <PokemonCard
               key={data.id}
