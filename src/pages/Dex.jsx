@@ -16,14 +16,16 @@ const StdBox = styled.div`
 
 const Dex = () => {
   // 선택한 포켓몬을 새 배열로 작성
-  const [ball, setBall] = useState([]);
+  const [ball, setBall] = useState(
+    () => JSON.parse(window.localStorage.getItem("ball")) || []
+  );
 
   // 선택한 포켓몬이 없을 때 이미지가 보이도록 하는 함수
   const GetEmptyBalls = () => {
     const EmptyBall = [];
-    const MyBalls = 6 - ball.length;
+    const MyBalls = ball.length;
 
-    for (let i = 0; i < MyBalls; i++) {
+    for (let i = 0; i < 6 - MyBalls; i++) {
       EmptyBall.push(
         <StdBox key={i} className="empty-card">
           <PokemonBall />
@@ -43,11 +45,10 @@ const Dex = () => {
     setBall([...ball]);
   };
 
-  // useEffect(() => {
-  //   // 상태가 변경될 때마다 로컬 스토리지에 저장
-  //   let balls = window.localStorage.getItem("balls")
-  //   window.localStorage.setItem("balls", JSON.stringify(balls));
-  // }, [balls]);
+  useEffect(() => {
+    // 상태가 변경될 때마다 로컬 스토리지에 저장
+    window.localStorage.setItem("ball", JSON.stringify(ball));
+  }, [ball]);
 
   return (
     <>

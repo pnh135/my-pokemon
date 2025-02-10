@@ -3,7 +3,7 @@ import React from "react";
 const PokemonBall = () => {
   return (
     <>
-      <img src="https://i.imgur.com/sJ5KcxJ.png" width="100" alt="..." />
+      <img src="/assets/Pokemonball.png" width="100" alt="..." />
     </>
   );
 };
