@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Button from "../styles/Button";
 import Card from "../styles/Card";
+import PokemonBall from "./PokemonBall";
+import { useContext } from "react";
+import { BallContext } from "../context/BallContext";
 
 // 리셋한 p 태그의 스타일 정하기
 const StdP = styled.p`
@@ -18,13 +21,39 @@ const StdContainer = styled.div`
   align-content: space-evenly;
 `;
 
-const Dashboard = ({ ball, setBall, GetEmptyBalls }) => {
+// 컨테이너 안 박스 포켓볼 스타일 정하기
+const StdBox = styled.div`
+  width: 100px;
+  height: 100px;
+  border: 5px dashed #949494;
+  background-color: white;
+  margin: 20px;
+`;
+
+const Dashboard = () => {
+  const { ball, setBall } = useContext(BallContext);
+
+  // 선택한 포켓몬이 없을 때 포켓볼 이미지가 보이도록 하는 함수
+  const GetEmptyBalls = () => {
+    const EmptyBall = [];
+    const MyBalls = ball.length;
+
+    // for문을 돌면서 하나씩 rendering
+    for (let i = 0; i < 6 - MyBalls; i++) {
+      EmptyBall.push(
+        <StdBox key={i} className="empty-card">
+          <PokemonBall />
+        </StdBox>
+      );
+    }
+    return EmptyBall;
+  };
   // 포켓몬 삭제 기능
   const removePokemon = (id) => {
-    const updateMyPokemon = ball.filter((item) => {
+    const removedPokemon = ball.filter((item) => {
       return item.id !== id;
     });
-    setBall(updateMyPokemon);
+    setBall(removedPokemon);
   };
   return (
     <>
