@@ -56,7 +56,7 @@
 
 <br/>
 
-+  [onSubmit 새로고침 해결하기](https://velog.io/@pna9904/onSubmit의-preventDefault-이후-input-초기화하기)
++  [prop-drilling: navigate 데이터가 날아갔어요](https://velog.io/@pna9904/prop-drilling-1-querystring-라우터-설정-후-데이터는-어떻게-받아와야-할까)
 
-+  [빈 객체가 추가되는 오류](https://velog.io/@pna9904/onSubmit으로-빈-배열이-추가되는-문제)
++  [prop-drilling: 클릭 이벤트가 여기저기 자연 발생한다](https://velog.io/@pna9904/prop-drilling-2-onClick의-버블링을-방지하자)
 
