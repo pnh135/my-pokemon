@@ -55,6 +55,8 @@ const Dashboard = () => {
     });
     setBall(removedPokemon);
   };
+
+  console.log(ball);
   return (
     <>
       <StdP>나만의 포켓몬</StdP>

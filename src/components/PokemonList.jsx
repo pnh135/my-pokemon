@@ -14,7 +14,7 @@ const Container = styled.div`
   align-content: space-evenly;
 `;
 
-const PokemonList = ({ AddPokemon }) => {
+const PokemonList = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -35,14 +35,7 @@ const PokemonList = ({ AddPokemon }) => {
               });
             }}
           >
-            <PokemonCard
-              key={data.id}
-              data={data}
-              onClick={(e) => {
-                e.stopPropagation();
-                AddPokemon(data);
-              }}
-            />
+            <PokemonCard key={data.id} data={data} />
           </div>
         ))}
       </Container>
