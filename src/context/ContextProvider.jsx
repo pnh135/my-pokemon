@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { BallContext } from "./BallContext";
+import { createContext } from "react";
 
-const BallProvider = ({ children }) => {
+export const BallContext = createContext(null);
+
+export const BallProvider = ({ children }) => {
   const [ball, setBall] = useState([]);
 
   return (
@@ -10,5 +12,3 @@ const BallProvider = ({ children }) => {
     </BallContext.Provider>
   );
 };
-
-export default BallProvider;
