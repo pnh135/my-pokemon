@@ -3,7 +3,7 @@
 
   ![메인 이미지](https://i.imgur.com/E1qlFOr.jpeg)
 
-  ▽▽ vecel 배포 링크 
+  ▽▽ vercel 배포 링크 
   [배포 페이지](https://my-pokemon-3kz8r2b7c-park-nahyuns-projects.vercel.app)
 
   해당 프로젝트는 **포켓몬 도감**을 작성하고 실제로 직접 포획할 수 있도록 기획되었다.
