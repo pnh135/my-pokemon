@@ -4,6 +4,7 @@ import { AddContext } from "./AddContext";
 import BallProvider from "./ContextProvider";
 
 const AddProvider = ({ Children }) => {
+  const { ball, setBall } = useContext(BallContext);
   const AddPokemon = (item) => {
     // 배열의 길이(선택된 포켓몬)이 6개가 되지 않을 때 추가
     if (ball.length < 6) {
@@ -13,10 +14,10 @@ const AddProvider = ({ Children }) => {
     }
     setBall([...ball, item]);
   };
-  const { ball, setBall } = useContext(BallContext);
+
   return (
     <>
-      <BallProvider value={ball}>
+      <BallProvider value={{ ball, setBall }}>
         <AddContext.Provider value={AddPokemon}>{Children}</AddContext.Provider>
       </BallProvider>
     </>

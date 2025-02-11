@@ -4,6 +4,7 @@ import Card from "../styles/Card";
 import PokemonBall from "./PokemonBall";
 import { useContext } from "react";
 import { BallContext } from "../context/BallContext";
+import BallProvider from "../context/ContextProvider";
 
 // 리셋한 p 태그의 스타일 정하기
 const StdP = styled.p`
@@ -55,26 +56,26 @@ const Dashboard = () => {
     });
     setBall(removedPokemon);
   };
-
-  console.log(ball);
   return (
     <>
-      <StdP>나만의 포켓몬</StdP>
-      {/* 클릭한 포켓몬을 가져오는 컨테이너 */}
-      <StdContainer>
-        {ball.map((item) => (
-          <Card key={item.id}>
-            <div>
-              <img src={item.img_url} />
-            </div>
-            <div className="card-name">{item.korean_name}</div>
-            <div className="card-num">No.{item.id}</div>
-            <Button onClick={() => removePokemon(item.id)}>제거</Button>
-          </Card>
-        ))}
+      <BallProvider>
+        <StdP>나만의 포켓몬</StdP>
+        {/* 클릭한 포켓몬을 가져오는 컨테이너 */}
+        <StdContainer>
+          {ball.map((item) => (
+            <Card key={item.id}>
+              <div>
+                <img src={item.img_url} />
+              </div>
+              <div className="card-name">{item.korean_name}</div>
+              <div className="card-num">No.{item.id}</div>
+              <Button onClick={() => removePokemon(item.id)}>제거</Button>
+            </Card>
+          ))}
 
-        {GetEmptyBalls()}
-      </StdContainer>
+          {GetEmptyBalls()}
+        </StdContainer>
+      </BallProvider>
     </>
   );
 };

@@ -1,7 +1,5 @@
-# 프로젝트 소개
+# 프로젝트 정보
 
-- 라우터 설정 완료
-- 컴포넌트 나누기 완료
-- 기본 UI 구성하기
+- ball 상태를 관리하는 BallProvider 생성
+- AddPokemon 함수를 관리하는 AddProvider 생성
 
-  ![이미지](url)
